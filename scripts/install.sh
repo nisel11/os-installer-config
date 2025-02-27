@@ -9,7 +9,7 @@ quit_on_err() { echo "ERROR: $1" >&2; exit 1; }
 check_commands() {
     local cmds=(wipefs parted lsblk sfdisk blkid cryptsetup blockdev mkfs.vfat mkfs.ext4 mkfs.btrfs btrfs podman rsync)
     for cmd in "${cmds[@]}"; do
-        command -v "$cmd" >/dev/null 2>&1 || quit_on_err "Команда '$cmd' не найдена. Установите её и повторите попытку."
+        sudo which "$cmd" >/dev/null 2>&1 || quit_on_err "Команда '$cmd' не найдена. Установите её и повторите попытку."
     done
 }
 

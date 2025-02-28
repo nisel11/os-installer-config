@@ -9,7 +9,7 @@ internet_checker_url: 'http://nmcheck.gnome.org/check_network_status.txt'
 fixed_language: no
 
 welcome_page:
-    logo    : '/usr/share/icons/idkwhere.png'
+    logo    : '/usr/share/icons/hicolor/scalable/apps/altlinux.svg'
     text    : 'Welcome to Alt Atomic GNOME!'
     usage   : yes
 
